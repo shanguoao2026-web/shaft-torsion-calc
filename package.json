@@ -1,0 +1,18 @@
+{
+  "name": "shaft-torsion-calc",
+  "version": "1.0.0",
+  "description": "Solid and hollow circular shaft torsion calculator",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "shaft-torsion-calc": "dist/cli.js" },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node test/shaft.test.js",
+    "start": "node dist/cli.js"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.7.0" }
+}
